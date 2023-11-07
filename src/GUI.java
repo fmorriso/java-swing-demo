@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.awt.*;
 
 public class GUI implements Runnable
@@ -6,21 +5,13 @@ public class GUI implements Runnable
     @Override
     public void run()
     {
-        final int multipleOf = 10;
+        final int multipleOf = 100;
         Dimension scaledSize = getScaledSize(0.45, multipleOf);
         System.out.format("Main page size (w: %d, h: %d): %n",scaledSize.width, scaledSize.height);
 
         String title = String.format("Swing Demo using java version: %s%n", System.getProperty("java.version"));
         HelloDemo frame = new HelloDemo(title, scaledSize);
-        frame.setSize(scaledSize);
-        frame.setPreferredSize(scaledSize);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
-        // puts the JFrame in the middle of the physical screen
-        frame.setLocationRelativeTo(null);
-
-        frame.setVisible(true);
     }
 
     /**
