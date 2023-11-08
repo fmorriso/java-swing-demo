@@ -51,6 +51,7 @@ public class MainGridPanel extends JPanel
 
     private Component generateNameInputArea() 
     {
+        // use a grid layout with one row, two columns
         JPanel subpanel = new JPanel(new GridLayout(1, 2));
         
         JLabel lbl = new JLabel("Enter your name: ");
